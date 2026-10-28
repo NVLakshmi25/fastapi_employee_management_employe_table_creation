@@ -91,19 +91,23 @@ schemas/employee.py — validates request data and shapes API responses.
 main.py — defines the FastAPI application and CRUD endpoints.
 ------------------------------------------------------------
 select(Employee) prepares a database query.
-
-
-
 .where() filters employees by department.
-
-
 
 .ilike() performs case-insensitive matching.
 
-
-
 .scalars().all() retrieves all matching employee objects.
 ------------------------------------------------------
+SELECT * FROM employee_management_db.employees;
+USE employee_management_db;
+SELECT
+employee_id,
+name,
+department,
+salary
+FROM employees 
+#ORDER BY employee_id
+#WHERE employee_id=3,
+WHERE employee_id=2;
 
 
 
